@@ -1,0 +1,3 @@
+example@arsari.com, Example
+johndoe@arsari.com, John Doe
+dontdoit@arsari.com, Sam Doe
