@@ -1,3 +1,8 @@
+# encoding declaration
+"""coding = utf-8"""
+
+
+# import packages
 import weather
 import mailer
 
