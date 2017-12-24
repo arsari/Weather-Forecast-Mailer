@@ -1,6 +1,12 @@
+# /usr/local/bin/python
+# encoding declaration
+"""coding = utf-8"""
+
+
+# import package
 import requests
 
-
+# function definition
 def get_weather_forecast():
     # connect to weather api
     url = 'http://api.openweathermap.org/data/2.5/weather?'

@@ -1,12 +1,15 @@
+# /usr/local/bin/python
 # encoding declaration
 """coding = utf-8"""
 
 
 # import packages
+from colorama import Fore, Back
 import weather
 import mailer
 
 
+# function definition
 def get_emails():
     # # method of list
     # emails = []
@@ -36,27 +39,27 @@ def get_emails():
     return emails
 
 
-def get_schedule():
+def get_message():
     # read external file and verify for error
     try:
-        schedule_file = open('schedule.txt', 'r')
-        schedule = schedule_file.read()
+        message_file = open('message.txt', 'r')
+        message = message_file.read()
     except FileNotFoundError as err:
         print(err)
 
-    return schedule
+    return message
 
 
 def main():
     emails = get_emails()
 
-    schedule = get_schedule()
+    message = get_message()
 
     forecast = weather.get_weather_forecast()
 
-    mailer.send_emails(emails, schedule, forecast)
+    mailer.send_emails(emails, message, forecast)
 
-    print('Done!!!')
+    print(Back.GREEN + Fore.WHITE + ' Done!!! ' + Fore.RESET + Back.RESET + '\n')
 
 
 # call function main
