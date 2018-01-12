@@ -6,6 +6,7 @@
 # import package
 import requests
 
+
 # function definition
 def get_weather_forecast():
     # connect to weather api
@@ -20,7 +21,7 @@ def get_weather_forecast():
     temp_max = weather_json['main']['temp_max']
 
     # creating string
-    forecast = 'The Ocala forecast for today is '
+    forecast = 'The Ocala weather forecast for today is '
     forecast += description + ' with a high of ' + str(int(temp_max))
     forecast += ' and a low of ' + str(int(temp_min)) + '.'
 
